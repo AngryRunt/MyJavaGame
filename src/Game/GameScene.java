@@ -13,12 +13,12 @@ public class GameScene extends JFrame
     this.setTitle("MegaGame");
     this.setVisible(true);
 
-    ImageIcon icHero = new ImageIcon("hero.jpg");
+    ImageIcon icHero = new ImageIcon("assets/hero.jpg");
     jlHero = new JLabel(icHero);
     this.add(jlHero);
     jlHero.setBounds(200, 400, 100, 30);
 
-    ImageIcon icEnemy = new ImageIcon("enemy.png");
+    ImageIcon icEnemy = new ImageIcon("assets/enemy.png");
     jlEnemy = new JLabel(icEnemy);
     this.add(jlEnemy);
     jlEnemy.setBounds(500, 400, 80, 85);
