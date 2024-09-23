@@ -4,14 +4,23 @@ public class EnemyThread extends Thread {
     @Override
     public void run() {
         while (true) {
-            if ((GameScene.jlEnemy.getY() - 3) > 0) {
-                GameScene.jlEnemy.setLocation(GameScene.jlEnemy.getX(), GameScene.jlEnemy.getY() - 3);
+
+            //System.out.println((int)(Math.random()*8));
+            GameScene.jlEnemy.setLocation(GameScene.jlEnemy.getX(), GameScene.jlEnemy.getY() - 3);
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(200);
                 } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
+                    e.printStackTrace();
                 }
+
+            if (((GameScene.jlHero.getX() - GameScene.jlEnemy.getX() < 3)) && ((GameScene.jlHero.getY() - GameScene.jlEnemy.getY() < 3))) {
+                Main.enemyObj.interrupt();
+                System.out.println("Caught!");
+                return;
             }
+
+
+
         }
 
 
