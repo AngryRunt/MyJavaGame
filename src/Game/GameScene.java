@@ -1,6 +1,8 @@
 package Game;
 
 import javax.swing.*;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -16,7 +18,7 @@ public class GameScene extends JFrame implements Interf01
     ImageIcon icHero = new ImageIcon("assets/hero.jpg");
     jlHero = new JLabel(icHero);
     this.add(jlHero);
-    jlHero.setBounds(200, 400, 100, 30);
+    jlHero.setBounds(100, 400, 100, 30);
 
     ImageIcon icEnemy = new ImageIcon("assets/enemy.png");
     jlEnemy = new JLabel(icEnemy);
@@ -67,6 +69,7 @@ public class GameScene extends JFrame implements Interf01
         }
 
         });
-    }
+
+            }
     static JLabel jlHero, jlEnemy;
 }
